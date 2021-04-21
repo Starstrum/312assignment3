@@ -67,7 +67,7 @@ void* consumer(int * thread_numb){
 //may need a process number 0 - how ever many
 //need to refacter to add things to the print queue rn this is just copied from assign2
 void producer(int process_number ){
-	 int thread_numb = *(int *)thread_n;
+	int thread_numb = *(int *)thread_n;
     buffer_t value;
     int i=0;
     while (i++ < PRODUCER_LOOPS) {
