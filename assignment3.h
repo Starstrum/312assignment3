@@ -2,6 +2,8 @@
 #include<sys/types.h>
 #include<sys/ipc.h>
 #include<sys/shm.h>
+#include<signal.h>
+#include<wait.h>
 //This is the header file for assignment 3 
 //all methods, structs and definitions for the assignment the counting_semaphore.h file includes everything needed already
 
@@ -16,9 +18,10 @@
 #define FULLSEMKEY 2673
 #define EMPTYSEMKEY 3467
 #define MUTEXKEY 1023
-#define FULLVALUEKEY 0968
+#define FULLVALUEKEY 2142
 #define EMPTYVALUEKEY 4231
 #define QUEUEKEY 1211
+#define POSKEY 3192
 
 //Size of the buffer 
 #define SIZE 25
@@ -29,5 +32,5 @@ typedef struct{
 	int size;
 }print_request;
 
-void producer(int i);
+void user(int i);
 void get_shm();
